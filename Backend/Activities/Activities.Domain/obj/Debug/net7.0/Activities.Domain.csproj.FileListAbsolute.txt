@@ -1,0 +1,12 @@
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Domain\bin\Debug\net7.0\Activities.Domain.deps.json
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Domain\bin\Debug\net7.0\Activities.Domain.dll
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Domain\bin\Debug\net7.0\Activities.Domain.pdb
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Domain\obj\Debug\net7.0\Activities.Domain.csproj.AssemblyReference.cache
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Domain\obj\Debug\net7.0\Activities.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Domain\obj\Debug\net7.0\Activities.Domain.AssemblyInfoInputs.cache
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Domain\obj\Debug\net7.0\Activities.Domain.AssemblyInfo.cs
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Domain\obj\Debug\net7.0\Activities.Domain.csproj.CoreCompileInputs.cache
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Domain\obj\Debug\net7.0\Activities.Domain.dll
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Domain\obj\Debug\net7.0\refint\Activities.Domain.dll
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Domain\obj\Debug\net7.0\Activities.Domain.pdb
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Domain\obj\Debug\net7.0\ref\Activities.Domain.dll

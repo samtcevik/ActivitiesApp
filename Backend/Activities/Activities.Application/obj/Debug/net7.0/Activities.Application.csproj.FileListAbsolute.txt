@@ -1,0 +1,17 @@
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Application\bin\Debug\net7.0\Activities.Application.deps.json
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Application\bin\Debug\net7.0\Activities.Application.dll
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Application\bin\Debug\net7.0\Activities.Application.pdb
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Application\bin\Debug\net7.0\Activities.Domain.dll
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Application\bin\Debug\net7.0\Activities.Persistence.dll
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Application\bin\Debug\net7.0\Activities.Domain.pdb
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Application\bin\Debug\net7.0\Activities.Persistence.pdb
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Application\obj\Debug\net7.0\Activities.Application.csproj.AssemblyReference.cache
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Application\obj\Debug\net7.0\Activities.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Application\obj\Debug\net7.0\Activities.Application.AssemblyInfoInputs.cache
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Application\obj\Debug\net7.0\Activities.Application.AssemblyInfo.cs
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Application\obj\Debug\net7.0\Activities.Application.csproj.CoreCompileInputs.cache
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Application\obj\Debug\net7.0\Activities.Application.csproj.CopyComplete
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Application\obj\Debug\net7.0\Activities.Application.dll
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Application\obj\Debug\net7.0\refint\Activities.Application.dll
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Application\obj\Debug\net7.0\Activities.Application.pdb
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Application\obj\Debug\net7.0\ref\Activities.Application.dll

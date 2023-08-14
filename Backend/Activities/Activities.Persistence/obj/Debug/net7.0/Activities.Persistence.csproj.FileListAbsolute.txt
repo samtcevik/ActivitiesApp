@@ -1,0 +1,17 @@
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Persistence\bin\Debug\net7.0\Activities.Persistence.deps.json
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Persistence\bin\Debug\net7.0\Activities.Persistence.runtimeconfig.json
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Persistence\bin\Debug\net7.0\Activities.Persistence.dll
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Persistence\bin\Debug\net7.0\Activities.Persistence.pdb
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Persistence\bin\Debug\net7.0\Activities.Domain.dll
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Persistence\bin\Debug\net7.0\Activities.Domain.pdb
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Persistence\obj\Debug\net7.0\Activities.Persistence.csproj.AssemblyReference.cache
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Persistence\obj\Debug\net7.0\Activities.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Persistence\obj\Debug\net7.0\Activities.Persistence.AssemblyInfoInputs.cache
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Persistence\obj\Debug\net7.0\Activities.Persistence.AssemblyInfo.cs
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Persistence\obj\Debug\net7.0\Activities.Persistence.csproj.CoreCompileInputs.cache
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Persistence\obj\Debug\net7.0\Activities.Persistence.csproj.CopyComplete
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Persistence\obj\Debug\net7.0\Activities.Persistence.dll
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Persistence\obj\Debug\net7.0\refint\Activities.Persistence.dll
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Persistence\obj\Debug\net7.0\Activities.Persistence.pdb
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Persistence\obj\Debug\net7.0\Activities.Persistence.genruntimeconfig.cache
+C:\_git\ActivitiesApp\Backend\Activities\Activities.Persistence\obj\Debug\net7.0\ref\Activities.Persistence.dll
