@@ -1,0 +1,113 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "Activities.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Activities.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Activities.Domain.dll": {}
+        }
+      },
+      "Activities.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Activities.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Activities.Persistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Activities.Persistence.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Activities.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Activities.Domain/Activities.Domain.csproj",
+      "msbuildProject": "../Activities.Domain/Activities.Domain.csproj"
+    },
+    "Activities.Persistence/1.0.0": {
+      "type": "project",
+      "path": "../Activities.Persistence/Activities.Persistence.csproj",
+      "msbuildProject": "../Activities.Persistence/Activities.Persistence.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "Activities.Domain >= 1.0.0",
+      "Activities.Persistence >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\_git\\ActivitiesApp\\Backend\\Activities\\Activities.Application\\Activities.Application.csproj",
+      "projectName": "Activities.Application",
+      "projectPath": "C:\\_git\\ActivitiesApp\\Backend\\Activities\\Activities.Application\\Activities.Application.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\_git\\ActivitiesApp\\Backend\\Activities\\Activities.Application\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "C:\\_git\\ActivitiesApp\\Backend\\Activities\\Activities.Domain\\Activities.Domain.csproj": {
+              "projectPath": "C:\\_git\\ActivitiesApp\\Backend\\Activities\\Activities.Domain\\Activities.Domain.csproj"
+            },
+            "C:\\_git\\ActivitiesApp\\Backend\\Activities\\Activities.Persistence\\Activities.Persistence.csproj": {
+              "projectPath": "C:\\_git\\ActivitiesApp\\Backend\\Activities\\Activities.Persistence\\Activities.Persistence.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
