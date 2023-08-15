@@ -20,7 +20,7 @@ namespace Activities.Application.Activities
 
         public class Handler : BaseHandler, IRequestHandler<Command>
         {
-            public Handler(DataContext context, IMapper mapper, ILogger logger) : base(context, mapper, logger)
+            public Handler(DataContext context, IMapper mapper) : base(context, mapper)
             {
             }
 

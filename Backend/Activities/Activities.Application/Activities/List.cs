@@ -16,7 +16,7 @@ namespace Activities.Application.Activities
         public class Query : IRequest<List<Activity>> { }
         public class Handler :BaseHandler, IRequestHandler<Query, List<Activity>>
         {
-            public Handler(DataContext context, ILogger logger) : base(context, logger)
+            public Handler(DataContext context) : base(context)
             {
             }
 

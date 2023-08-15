@@ -13,20 +13,19 @@ namespace Activities.Application
     {
         protected readonly IMapper _mapper;
         protected readonly DataContext _context;
-        protected readonly ILogger _logger;
+    
         public BaseHandler()
         {
             //Do nothing
         }
 
-        public BaseHandler(DataContext context, ILogger logger) 
+        public BaseHandler(DataContext context) 
         {
             _context = context;
-            _logger = logger;
         }
 
 
-        public BaseHandler(DataContext context, IMapper mapper, ILogger logger) : this(context, logger)
+        public BaseHandler(DataContext context, IMapper mapper) : this(context)
         {
             _mapper = mapper;
         }

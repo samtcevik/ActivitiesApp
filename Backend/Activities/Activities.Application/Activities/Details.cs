@@ -18,7 +18,7 @@ namespace Activities.Application.Activities
 
         public class Handler : BaseHandler, IRequestHandler<Query, Activity>
         {
-            public Handler(DataContext context, ILogger logger) : base(context, logger){ }
+            public Handler(DataContext context) : base(context){ }
 
             public async Task<Activity> Handle(Query request, CancellationToken cancellationToken)
             {
