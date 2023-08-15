@@ -76,3 +76,5 @@ C:\_git\ActivitiesApp\Backend\Activities\Activities.API\bin\Debug\net7.0\System.
 C:\_git\ActivitiesApp\Backend\Activities\Activities.API\bin\Debug\net7.0\MediatR.dll
 C:\_git\ActivitiesApp\Backend\Activities\Activities.API\bin\Debug\net7.0\MediatR.Contracts.dll
 C:\_git\ActivitiesApp\Backend\Activities\Activities.API\bin\Debug\net7.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\_git\ActivitiesApp\Backend\Activities\Activities.API\bin\Debug\net7.0\AutoMapper.dll
+C:\_git\ActivitiesApp\Backend\Activities\Activities.API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
