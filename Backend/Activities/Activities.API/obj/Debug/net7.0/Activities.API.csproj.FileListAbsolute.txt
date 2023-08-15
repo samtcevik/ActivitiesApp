@@ -73,3 +73,6 @@ C:\_git\ActivitiesApp\Backend\Activities\Activities.API\bin\Debug\net7.0\Humaniz
 C:\_git\ActivitiesApp\Backend\Activities\Activities.API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\_git\ActivitiesApp\Backend\Activities\Activities.API\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\_git\ActivitiesApp\Backend\Activities\Activities.API\bin\Debug\net7.0\System.CodeDom.dll
+C:\_git\ActivitiesApp\Backend\Activities\Activities.API\bin\Debug\net7.0\MediatR.dll
+C:\_git\ActivitiesApp\Backend\Activities\Activities.API\bin\Debug\net7.0\MediatR.Contracts.dll
+C:\_git\ActivitiesApp\Backend\Activities\Activities.API\bin\Debug\net7.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
