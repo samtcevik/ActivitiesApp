@@ -1,26 +1,27 @@
 import { Card, Button, Image } from 'semantic-ui-react'
 import { Activity } from '../../../app/models/activity'
 
-interface Props{
-    activity:Activity
+interface Props {
+    activity: Activity | undefined,
+    cancelSelectActivity: () => void;
 }
-function ActivityDetails({activity} : Props) {
+function ActivityDetails({ activity, cancelSelectActivity }: Props) {
     return (
         <Card fluid>
-            <Image src={`/assets/categoryImages/${activity.category}.jpg`} />
+            <Image src={`/assets/categoryImages/${activity?.category}.jpg`} />
             <Card.Content>
-                <Card.Header>{activity.title}</Card.Header>
+                <Card.Header>{activity?.title}</Card.Header>
                 <Card.Meta>
-                    <span className='date'>{activity.date}</span>
+                    <span className='date'>{activity?.date}</span>
                 </Card.Meta>
                 <Card.Description>
-                    {activity.description}
+                    {activity?.description}
                 </Card.Description>
             </Card.Content>
             <Card.Content extra>
                 <Button.Group widths="2">
                     <Button basic color="blue" content="Edit"></Button>
-                    <Button basic color="grey" content="Cancel"></Button>
+                    <Button basic color="grey" content="Cancel" onClick={() => cancelSelectActivity()}></Button>
                 </Button.Group>
             </Card.Content>
         </Card>
