@@ -6,21 +6,22 @@ import ActivityForm from '../form/ActivityForm';
 
 interface Props {
     activities: Activity[];
-    selectedActivity : Activity | undefined;
-    selectActivity : (id:string) => void;
-    cancelSelectActivity : () => void;
-    editMode : boolean
+    selectedActivity: Activity | undefined;
+    selectActivity: (id: string) => void;
+    cancelSelectActivity: () => void;
+    editMode: boolean,
+    handleEditMode: (isEdit: boolean) => void
 }
 
-function ActivityDashboard({activities,selectedActivity, selectActivity , cancelSelectActivity, editMode}:Props) {
+function ActivityDashboard({ activities, selectedActivity, selectActivity, cancelSelectActivity, editMode, handleEditMode }: Props) {
     return (
         <Grid>
             <Grid.Column width="10">
-                <ActivityList activities={activities} selectActivity={selectActivity}></ActivityList>
+                <ActivityList activities={activities} selectActivity={selectActivity} handleEditMode={handleEditMode}></ActivityList>
             </Grid.Column>
             <Grid.Column width='6'>
-                {selectedActivity && <ActivityDetails activity={selectedActivity} cancelSelectActivity = {cancelSelectActivity}></ActivityDetails>}
-                {editMode && <ActivityForm cancelSelectActivity ={cancelSelectActivity}></ActivityForm>}
+                {selectedActivity && <ActivityDetails activity={selectedActivity} cancelSelectActivity={cancelSelectActivity} handleEditMode={handleEditMode}></ActivityDetails>}
+                {editMode && <ActivityForm handleEditMode={handleEditMode} activity={selectedActivity}></ActivityForm>}
             </Grid.Column>
         </Grid>
     )

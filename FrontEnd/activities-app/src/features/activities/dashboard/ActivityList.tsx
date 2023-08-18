@@ -3,9 +3,16 @@ import {Segment, Item, Button, Label} from 'semantic-ui-react'
 interface Props{
     activities:Activity[],
     selectActivity : (id:string) => void;
+    handleEditMode : (isEdit : boolean) => void;
 }
 
-function ActivityList({activities, selectActivity}:Props){
+
+
+function ActivityList({activities, selectActivity, handleEditMode}:Props){
+    const handleOnclick = (id:string)=>{
+        selectActivity(id);
+        handleEditMode(false);
+    }
     return(
         <Segment>
             <Item.Group divided>
@@ -23,7 +30,7 @@ function ActivityList({activities, selectActivity}:Props){
                                  </div>
                             </Item.Description>
                             <Item.Extra>
-                                <Button onClick = {()=>selectActivity(item.id)} floated="right" content="View" color="blue"></Button>
+                                <Button onClick = {()=>handleOnclick(item.id)} floated="right" content="View" color="blue"></Button>
                                 <Label basic content={item.category}></Label>
                             </Item.Extra>
                         </Item.Content>

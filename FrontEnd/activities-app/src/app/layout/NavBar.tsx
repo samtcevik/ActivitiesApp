@@ -1,9 +1,15 @@
 import { Menu, Container, Button } from 'semantic-ui-react'
 
 interface Props{
-    setEditMode : (isEdit:boolean)=> void
+    setEditMode : (isEdit:boolean)=> void;
+    handleCancelSelectActivity : ()=> void;
 }
-function NavBar({setEditMode}:Props) {
+function NavBar({setEditMode, handleCancelSelectActivity}:Props) {
+
+    const handleOnClick = (isEdit:boolean)=>{
+        handleCancelSelectActivity();
+        setEditMode(isEdit);
+    }
     return (
         <Menu inverted fixed='top'>
             <Container>
@@ -13,7 +19,7 @@ function NavBar({setEditMode}:Props) {
                 </Menu.Item>
                 <Menu.Item name='Activities'></Menu.Item>
                 <Menu.Item>
-                    <Button onClick={()=>setEditMode(true)} positive content="Create Activity"></Button>
+                    <Button onClick={()=>handleOnClick(true)} positive content="Create Activity"></Button>
                 </Menu.Item>
             </Container>
         </Menu>

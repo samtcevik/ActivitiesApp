@@ -4,8 +4,9 @@ import { Activity } from '../../../app/models/activity'
 interface Props {
     activity: Activity | undefined,
     cancelSelectActivity: () => void;
+    handleEditMode : (isEdit:boolean)=>void;
 }
-function ActivityDetails({ activity, cancelSelectActivity }: Props) {
+function ActivityDetails({ activity, cancelSelectActivity, handleEditMode }: Props) {
     return (
         <Card fluid>
             <Image src={`/assets/categoryImages/${activity?.category}.jpg`} />
@@ -20,7 +21,7 @@ function ActivityDetails({ activity, cancelSelectActivity }: Props) {
             </Card.Content>
             <Card.Content extra>
                 <Button.Group widths="2">
-                    <Button basic color="blue" content="Edit"></Button>
+                    <Button basic color="blue" content="Edit" onClick={()=> handleEditMode(true) }></Button>
                     <Button basic color="grey" content="Cancel" onClick={() => cancelSelectActivity()}></Button>
                 </Button.Group>
             </Card.Content>

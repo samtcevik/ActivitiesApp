@@ -28,16 +28,19 @@ function App() {
   const handleEditMode = (isEdit:boolean)=>{
       setEditMode(isEdit);
   }
+  
   return (
     <div className="App">
-      <NavBar setEditMode = {handleEditMode}></NavBar>
+      <NavBar setEditMode = {handleEditMode} handleCancelSelectActivity = {handleCancelSelectActivity}></NavBar>
       <Container style={{ marginTop: "7em" }}>
         <ActivityDashboard
           activities={activities}
           selectedActivity={selectedActivity}
           selectActivity={handleSelectedActivity}
           cancelSelectActivity={handleCancelSelectActivity}
-          editMode = {editMode}></ActivityDashboard>
+          editMode = {editMode}
+          handleEditMode = {handleEditMode}
+          ></ActivityDashboard>
       </Container>
     </div>
   );
