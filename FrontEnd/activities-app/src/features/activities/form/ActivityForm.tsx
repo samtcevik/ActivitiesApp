@@ -5,10 +5,12 @@ import { Activity } from '../../../app/models/activity';
 interface Props {
     handleEditMode: (isEdit: boolean) => void;
     activity: Activity | undefined
+    createOrEdit : (activity:Activity)=> void;
 }
-function ActivityForm({ handleEditMode, activity: selectedActivity }: Props) {
+function ActivityForm({ handleEditMode, activity: selectedActivity, createOrEdit }: Props) {
 
     const initialState = selectedActivity ?? {
+        id: "",
         title: "",
         description: "",
         category: "",
@@ -26,7 +28,7 @@ function ActivityForm({ handleEditMode, activity: selectedActivity }: Props) {
 
 
     function handleSubmit(){
-        console.log(activity)
+        createOrEdit(activity)
     }
 
 

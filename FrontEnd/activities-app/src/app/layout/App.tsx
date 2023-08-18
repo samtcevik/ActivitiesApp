@@ -29,6 +29,12 @@ function App() {
       setEditMode(isEdit);
   }
   
+  const handleCreateOrEditActivity = (activity:Activity)=>{
+      activity.id ? setActivities([...activities.filter(x=>x.id !== activity.id), activity]) : setActivities([...activities, activity]);
+      setEditMode(false);
+      setSelectedActivities(activity);
+
+  }
   return (
     <div className="App">
       <NavBar setEditMode = {handleEditMode} handleCancelSelectActivity = {handleCancelSelectActivity}></NavBar>
@@ -40,6 +46,7 @@ function App() {
           cancelSelectActivity={handleCancelSelectActivity}
           editMode = {editMode}
           handleEditMode = {handleEditMode}
+          createOrEdit = {handleCreateOrEditActivity}
           ></ActivityDashboard>
       </Container>
     </div>
