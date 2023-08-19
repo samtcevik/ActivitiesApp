@@ -12,17 +12,29 @@ interface Props {
     editMode: boolean,
     handleEditMode: (isEdit: boolean) => void
     createOrEdit : (activity:Activity)=> void;
+    deleteActivity : (id: string) => void;
+    openForm: (id?: string) => void;
+    closeForm: () => void;
 }
 
-function ActivityDashboard({ activities, selectedActivity, selectActivity, cancelSelectActivity, editMode, handleEditMode, createOrEdit }: Props) {
+function ActivityDashboard({ activities, selectedActivity, selectActivity, cancelSelectActivity, editMode, handleEditMode, createOrEdit, deleteActivity, openForm, closeForm }: Props) {
     return (
         <Grid>
             <Grid.Column width="10">
-                <ActivityList activities={activities} selectActivity={selectActivity} handleEditMode={handleEditMode}></ActivityList>
+                <ActivityList activities={activities} selectActivity={selectActivity} handleEditMode={handleEditMode} deleteActivity = {deleteActivity}></ActivityList>
             </Grid.Column>
             <Grid.Column width='6'>
-                {selectedActivity && <ActivityDetails activity={selectedActivity} cancelSelectActivity={cancelSelectActivity} handleEditMode={handleEditMode}></ActivityDetails>}
-                {editMode && <ActivityForm handleEditMode={handleEditMode} activity={selectedActivity} createOrEdit = {createOrEdit}></ActivityForm>}
+                {selectedActivity && !editMode &&<ActivityDetails 
+                activity={selectedActivity} 
+                cancelSelectActivity={cancelSelectActivity} 
+                openForm={openForm}
+                ></ActivityDetails>}
+
+                {editMode && <ActivityForm 
+                handleEditMode={handleEditMode} 
+                activity={selectedActivity} 
+                createOrEdit = {createOrEdit}
+                closeForm={closeForm} ></ActivityForm>}
             </Grid.Column>
         </Grid>
     )

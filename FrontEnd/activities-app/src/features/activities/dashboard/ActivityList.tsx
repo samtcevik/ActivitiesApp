@@ -4,11 +4,12 @@ interface Props{
     activities:Activity[],
     selectActivity : (id:string) => void;
     handleEditMode : (isEdit : boolean) => void;
+    deleteActivity : (id: string) => void;
 }
 
 
 
-function ActivityList({activities, selectActivity, handleEditMode}:Props){
+function ActivityList({activities, selectActivity, handleEditMode, deleteActivity}:Props){
     const handleOnclick = (id:string)=>{
         selectActivity(id);
         handleEditMode(false);
@@ -31,6 +32,7 @@ function ActivityList({activities, selectActivity, handleEditMode}:Props){
                             </Item.Description>
                             <Item.Extra>
                                 <Button onClick = {()=>handleOnclick(item.id)} floated="right" content="View" color="blue"></Button>
+                                <Button onClick = {()=>deleteActivity(item.id)} floated="right" content="Delete" color="red"></Button>
                                 <Label basic content={item.category}></Label>
                             </Item.Extra>
                         </Item.Content>

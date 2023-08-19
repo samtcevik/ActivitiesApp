@@ -1,15 +1,10 @@
 import { Menu, Container, Button } from 'semantic-ui-react'
 
 interface Props{
-    setEditMode : (isEdit:boolean)=> void;
-    handleCancelSelectActivity : ()=> void;
+    openForm: (id?: string) => void;
 }
-function NavBar({setEditMode, handleCancelSelectActivity}:Props) {
-
-    const handleOnClick = (isEdit:boolean)=>{
-        handleCancelSelectActivity();
-        setEditMode(isEdit);
-    }
+function NavBar({openForm}:Props) {
+    
     return (
         <Menu inverted fixed='top'>
             <Container>
@@ -19,7 +14,7 @@ function NavBar({setEditMode, handleCancelSelectActivity}:Props) {
                 </Menu.Item>
                 <Menu.Item name='Activities'></Menu.Item>
                 <Menu.Item>
-                    <Button onClick={()=>handleOnClick(true)} positive content="Create Activity"></Button>
+                    <Button onClick={()=>openForm()} positive content="Create Activity"></Button>
                 </Menu.Item>
             </Container>
         </Menu>
