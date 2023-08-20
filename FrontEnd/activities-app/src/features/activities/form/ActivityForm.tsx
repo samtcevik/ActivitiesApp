@@ -39,7 +39,7 @@ function ActivityForm({ activity: selectedActivity, createOrEdit, closeForm }: P
                 <Form.Input placeholder='Title' name="title" value={activity?.title} onChange={handelOnChange}></Form.Input>
                 <Form.TextArea placeholder='Description' name="description" value={activity?.description} onChange={handelOnChange}></Form.TextArea>
                 <Form.Input placeholder='Category' name="category" value={activity?.category} onChange={handelOnChange}></Form.Input>
-                <Form.Input placeholder='Date' name="date" value={activity?.date} onChange={handelOnChange}></Form.Input>
+                <Form.Input type='date' placeholder='Date' name="date" value={activity?.date} onChange={handelOnChange}></Form.Input>
                 <Form.Input placeholder='City' name="city" value={activity?.city} onChange={handelOnChange}></Form.Input>
                 <Form.Input placeholder='Venue' name="venue" value={activity?.venue} onChange={handelOnChange}></Form.Input>
                 <Button floated='right' positive type='submit' content='Submit' />
