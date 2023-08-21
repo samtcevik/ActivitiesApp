@@ -1,23 +1,25 @@
 import { Activity } from "../../../app/models/activity";
 import {Segment, Item, Button, Label} from 'semantic-ui-react'
 interface Props{
-    activities:Activity[],
-    selectActivity : (id:string) => void;
+    activities?:Activity[],
+    selectActivity : (id?:string) => void;
     handleEditMode : (isEdit : boolean) => void;
-    deleteActivity : (id: string) => void;
+    deleteActivity : (id?: string) => void;
+    submitting:boolean;
+
 }
 
 
 
-function ActivityList({activities, selectActivity, handleEditMode, deleteActivity}:Props){
-    const handleOnclick = (id:string)=>{
+function ActivityList({activities, selectActivity, handleEditMode, deleteActivity, submitting}:Props){
+    const handleOnclick = (id?:string)=>{
         selectActivity(id);
         handleEditMode(false);
     }
     return(
         <Segment>
             <Item.Group divided>
-                {activities.map(item=>(
+                {activities?.map(item=>(
                     <Item key={item.id}>
                         <Item.Content>
                             <Item.Header as="a">{item.title}</Item.Header>
@@ -31,8 +33,8 @@ function ActivityList({activities, selectActivity, handleEditMode, deleteActivit
                                  </div>
                             </Item.Description>
                             <Item.Extra>
-                                <Button onClick = {()=>handleOnclick(item.id)} floated="right" content="View" color="blue"></Button>
-                                <Button onClick = {()=>deleteActivity(item.id)} floated="right" content="Delete" color="red"></Button>
+                                <Button onClick = {()=>handleOnclick(item?.id)} floated="right" content="View" color="blue"></Button>
+                                <Button loading={submitting} onClick = {()=>deleteActivity(item?.id)} floated="right" content="Delete" color="red"></Button>
                                 <Label basic content={item.category}></Label>
                             </Item.Extra>
                         </Item.Content>

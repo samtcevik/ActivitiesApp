@@ -5,24 +5,28 @@ import NavBar from "./NavBar";
 import './style.css'
 import ActivityDashboard from "../../features/activities/dashboard/ActivityDashboard";
 import agent from "../api/agent";
+import Loading from "./Loading";
 function App() {
   const [activities, setActivities] = useState<Activity[]>([]);
   const [selectedActivity, setSelectedActivities] = useState<Activity | undefined>(undefined);
   const [editMode, setEditMode] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
     agent.Activities.list()
       .then(response => {
-        let activities:Activity[] = [];
-        response.forEach(item=>{
+        let activities: Activity[] = [];
+        response.forEach(item => {
           item.date = item.date.split("T")[0];
           activities.push(item);
         })
         setActivities(activities);
+        setLoading(false);
       });
   }, []);
 
-  const handleSelectedActivity = (id: string) => setSelectedActivities(activities.find(x => x.id === id));
+  const handleSelectedActivity = (id?: string) => setSelectedActivities(activities.find(x => x.id === id));
 
   const handleCancelSelectActivity = () => setSelectedActivities(undefined)
 
@@ -33,15 +37,45 @@ function App() {
     setEditMode(true);
   };
 
-  const handleFormClose = ()=> setEditMode(false);
+  const handleFormClose = () => setEditMode(false);
 
   const handleCreateOrEditActivity = (activity: Activity) => {
-    activity.id ? setActivities([...activities.filter(x => x.id !== activity.id), activity]) : setActivities([...activities, activity]);
-    setEditMode(false);
-    setSelectedActivities(activity);
+    setSubmitting(true);
+    if (activity.id) {
+      agent.Activities.update(activity).then(() => {
+        setActivities([...activities.filter(x => x.id !== activity.id), activity]);
+        setSelectedActivities(activity);
+        setEditMode(false);
+        setSubmitting(false);
+      }).catch((e) => {
+        console.log(e);
+      });
+    }
+    else {
+      activity.id = "0";
+      agent.Activities.create(activity).then(() => {
+        setActivities([...activities, activity]);
+        setSelectedActivities(activity);
+        setEditMode(false);
+        setSubmitting(false);
+      }).finally(() => {
+        setSubmitting(false);
+        setEditMode(false);
+      });
+    }
   }
 
-  const handleDeleteActivity = (id: string) => setActivities([...activities.filter(x => x.id !== id)]);
+  const handleDeleteActivity = (id?: string) => {
+    setSubmitting(true);
+    agent.Activities.delete(id).then(() => {
+      setActivities([...activities.filter(x => x.id !== id)]);
+      setSubmitting(false);
+
+    })
+
+  };
+
+  if (loading) return <Loading content="Loading..."></Loading>
 
   return (
     <div className="App">
@@ -58,6 +92,7 @@ function App() {
           deleteActivity={handleDeleteActivity}
           openForm={handleFormOpen}
           closeForm={handleFormClose}
+          submitting={submitting}
         ></ActivityDashboard>
       </Container>
     </div>
