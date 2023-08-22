@@ -28,7 +28,7 @@ namespace Activities.API.Controllers
         [HttpPost] //api/activities
         public async Task<IActionResult> CreateActivity(Activity activity)
         {
-            activity.Id = null;
+            //activity.Id = null;
 
             return Ok(await Mediator.Send(new Create.Command { Activity = activity }));
         }

@@ -1,9 +1,8 @@
 import { Activity } from "../../../app/models/activity";
 import {Segment, Item, Button, Label} from 'semantic-ui-react'
+import { useStore } from "../../../app/stores/store";
 interface Props{
     activities?:Activity[],
-    selectActivity : (id?:string) => void;
-    handleEditMode : (isEdit : boolean) => void;
     deleteActivity : (id?: string) => void;
     submitting:boolean;
 
@@ -11,11 +10,15 @@ interface Props{
 
 
 
-function ActivityList({activities, selectActivity, handleEditMode, deleteActivity, submitting}:Props){
+function ActivityList({activities, deleteActivity, submitting}:Props){
+    const {activityStore} = useStore();
+
+
     const handleOnclick = (id?:string)=>{
-        selectActivity(id);
-        handleEditMode(false);
+        activityStore.selectActivity(id);
     }
+
+    
     return(
         <Segment>
             <Item.Group divided>

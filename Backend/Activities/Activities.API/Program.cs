@@ -20,8 +20,8 @@ if (app.Environment.IsDevelopment())
 }
 app.UseCors("CorsPolicy");
 
-app.UseAuthorization(); 
-
+app.UseAuthorization();
+app.UseMiddleware<RequestMiddleware>();
 app.MapControllers();
 
 using var scope = app.Services.CreateScope();
