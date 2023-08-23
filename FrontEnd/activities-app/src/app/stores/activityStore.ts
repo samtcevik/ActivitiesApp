@@ -37,6 +37,7 @@ export default class ActivityStore {
     }
 
     selectActivity = (id?:string)=>{
+        this.editMode = false;
         this.selectedActivity = this.activities.find(x=> x.id === id);
     }
 

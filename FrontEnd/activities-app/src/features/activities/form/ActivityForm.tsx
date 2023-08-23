@@ -2,6 +2,7 @@ import { Segment, Form, Button } from 'semantic-ui-react'
 import { ChangeEvent, useState } from 'react'
 import { Activity } from '../../../app/models/activity';
 import { useStore } from '../../../app/stores/store';
+import {observer} from 'mobx-react-lite'
 
 interface Props {
     createOrEdit : (activity:Activity)=> void;
@@ -51,4 +52,4 @@ function ActivityForm({  createOrEdit,  submitting }: Props) {
     )
 }
 
-export default ActivityForm;
+export default observer(ActivityForm);

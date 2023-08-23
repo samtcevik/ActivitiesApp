@@ -1,6 +1,7 @@
 import { Card, Button, Image } from 'semantic-ui-react'
 import { useStore } from '../../../app/stores/store';
 import Loading from '../../../app/layout/Loading';
+import {observer} from 'mobx-react-lite'
 
 
 function ActivityDetails() {
@@ -31,4 +32,4 @@ function ActivityDetails() {
     )
 }
 
-export default ActivityDetails
+export default observer(ActivityDetails)

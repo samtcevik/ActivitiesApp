@@ -4,6 +4,7 @@ import ActivityList from './ActivityList';
 import ActivityDetails from '../details/ActivityDetail';
 import ActivityForm from '../form/ActivityForm';
 import { useStore } from '../../../app/stores/store';
+import {observer} from 'mobx-react-lite'
 
 interface Props {
     activities: Activity[];
@@ -31,4 +32,4 @@ function ActivityDashboard({ activities, createOrEdit, deleteActivity, submittin
     )
 }
 
-export default ActivityDashboard;
+export default observer(ActivityDashboard);

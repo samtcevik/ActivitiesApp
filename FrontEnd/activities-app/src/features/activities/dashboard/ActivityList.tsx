@@ -1,6 +1,8 @@
 import { Activity } from "../../../app/models/activity";
 import {Segment, Item, Button, Label} from 'semantic-ui-react'
 import { useStore } from "../../../app/stores/store";
+import {observer} from 'mobx-react-lite'
+
 interface Props{
     activities?:Activity[],
     deleteActivity : (id?: string) => void;
@@ -8,16 +10,13 @@ interface Props{
 
 }
 
-
-
 function ActivityList({activities, deleteActivity, submitting}:Props){
     const {activityStore} = useStore();
 
-
     const handleOnclick = (id?:string)=>{
+        activityStore.editMode = false;
         activityStore.selectActivity(id);
     }
-
     
     return(
         <Segment>
@@ -48,4 +47,4 @@ function ActivityList({activities, deleteActivity, submitting}:Props){
     )
 }
 
-export default ActivityList;
+export default observer(ActivityList);
