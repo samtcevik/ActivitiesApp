@@ -6,11 +6,6 @@ import {Link} from 'react-router-dom';
 
 function ActivityList(){
     const {activityStore} = useStore();
-
-    const handleOnclick = (id:string)=>{
-        activityStore.editMode = false;
-        activityStore.selectActivity(id);
-    }
     
     return(
         <Segment>
