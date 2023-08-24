@@ -1,8 +1,6 @@
 ﻿using Activities.Domain.Entities;
 using Activities.Persistence.Contexts;
-using AutoMapper;
 using MediatR;
-using Microsoft.Extensions.Logging;
 
 namespace Activities.Application.Activities
 {

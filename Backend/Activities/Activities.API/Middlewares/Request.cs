@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using System.Threading.Tasks;
-
-public class RequestMiddleware
+﻿public class RequestMiddleware
 {
     private readonly RequestDelegate _next;
 

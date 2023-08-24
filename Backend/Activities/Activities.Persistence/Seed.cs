@@ -1,11 +1,6 @@
 ﻿using Activities.Domain.Entities;
 using Activities.Persistence.Contexts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using System.IO;
 namespace Activities.Persistence
 {
     public class Seed
