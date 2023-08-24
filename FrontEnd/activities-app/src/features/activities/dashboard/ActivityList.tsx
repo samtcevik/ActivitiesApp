@@ -1,7 +1,7 @@
-import {Segment, Item, Button, Label} from 'semantic-ui-react'
+import {Segment, Item, Button, Label} from 'semantic-ui-react';
 import { useStore } from "../../../app/stores/store";
-import {observer} from 'mobx-react-lite'
-
+import {observer} from 'mobx-react-lite';
+import {Link} from 'react-router-dom';
 
 
 function ActivityList(){
@@ -29,7 +29,7 @@ function ActivityList(){
                                  </div>
                             </Item.Description>
                             <Item.Extra>
-                                <Button onClick = {()=>handleOnclick(item?.id)} floated="right" content="View" color="blue"></Button>
+                                <Button as={Link}  to={`/activities/${item.id}`} floated="right" content="View" color="blue"></Button>
                                 <Button loading={activityStore.loading} onClick = {()=>activityStore.deleteActivity(item?.id)} floated="right" content="Delete" color="red"></Button>
                                 <Label basic content={item.category}></Label>
                             </Item.Extra>

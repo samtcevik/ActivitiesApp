@@ -4,6 +4,8 @@ import ActivityDetails from '../details/ActivityDetail';
 import ActivityForm from '../form/ActivityForm';
 import { useStore } from '../../../app/stores/store';
 import { observer } from 'mobx-react-lite'
+import { useEffect } from 'react';
+import Loading from '../../../app/layout/Loading';
 
 
 
@@ -11,6 +13,18 @@ function ActivityDashboard() {
 
     const { activityStore } = useStore();
     const { selectedActivity, editMode } = activityStore;
+
+
+
+    useEffect(() => {
+      activityStore.loadActivities();
+    }, [activityStore]);
+  
+    
+  
+    if (activityStore.loadingInitial) return <Loading content="Loading..."></Loading>
+
+
     return (
         <Grid>
             <Grid.Column width="10">
