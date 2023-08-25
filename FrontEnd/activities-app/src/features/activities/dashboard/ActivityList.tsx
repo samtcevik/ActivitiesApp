@@ -1,7 +1,7 @@
-import {Segment, Item, Button, Label} from 'semantic-ui-react';
+import {Segment, Item} from 'semantic-ui-react';
 import { useStore } from "../../../app/stores/store";
 import {observer} from 'mobx-react-lite';
-import {Link} from 'react-router-dom';
+import ActivityListItem from './ActivityListItem';
 
 
 function ActivityList(){
@@ -10,26 +10,8 @@ function ActivityList(){
     return(
         <Segment>
             <Item.Group divided>
-                {activityStore.activitiesByDate?.map(item=>(
-                    <Item key={item.id}>
-                        <Item.Content>
-                            <Item.Header as="a">{item.title}</Item.Header>
-                            <Item.Meta>{item.date}</Item.Meta>
-                            <Item.Description>
-                                 <div>
-                                    {item.description}
-                                 </div>
-                                 <div>
-                                    {item.city}, {item.venue} 
-                                 </div>
-                            </Item.Description>
-                            <Item.Extra>
-                                <Button as={Link}  to={`/activities/${item.id}`} floated="right" content="View" color="blue"></Button>
-                                <Button loading={activityStore.loading} onClick = {()=>activityStore.deleteActivity(item?.id)} floated="right" content="Delete" color="red"></Button>
-                                <Label basic content={item.category}></Label>
-                            </Item.Extra>
-                        </Item.Content>
-                    </Item>
+                {activityStore.activitiesByDate?.map(activity=>(
+                    <ActivityListItem key={activity.id} activitiy={activity}/>
                 ))}
             </Item.Group>
         </Segment>

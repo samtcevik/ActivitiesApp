@@ -6,7 +6,7 @@ function NavBar() {
         <Menu inverted fixed='top'>
             <Container>
                 <Menu.Item as={NavLink} to='/' header>
-                    <img src='/assets/logo.png' alt="logo" style={{marginRight:"10px", backgroundColor:"#0000EE"}}></img>
+                    <img src='/assets/logo.png' alt="logo" style={{marginRight:"10px", backgroundColor:"#0000EE;"}}></img>
                     Activities Dashboard
                 </Menu.Item>
                 <Menu.Item as={NavLink} to='/activities' name='Activities'></Menu.Item>

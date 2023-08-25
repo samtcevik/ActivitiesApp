@@ -6,7 +6,6 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Activity } from '../../../app/models/activity';
 import Loading from '../../../app/layout/Loading';
 
-
 function ActivityForm() {
     const{activityStore} = useStore();
     const{ loading, createActivity, updateActivity, loadActivity, loadingInitial} = activityStore;
