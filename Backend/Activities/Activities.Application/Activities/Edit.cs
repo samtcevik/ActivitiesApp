@@ -22,8 +22,13 @@ namespace Activities.Application.Activities
             {
                 var activity = await _context.Activities.FindAsync(request.Activity.Id);
 
-                _mapper.Map(request.Activity, activity);
+                //_mapper.Map<Activity,Activity>(request.Activity, activity);
                 activity.Title = request.Activity.Title ?? activity.Title;
+                activity.Category = request.Activity.Category ?? activity.Category;
+                activity.City = request.Activity.City ?? activity.City;
+                activity.Venue = request.Activity.Venue ?? activity.Venue;
+                activity.Date = request.Activity?.Date ?? activity.Date;
+                activity.Description = request.Activity.Description ?? activity.Description;
                 
                 await _context.SaveChangesAsync();
 

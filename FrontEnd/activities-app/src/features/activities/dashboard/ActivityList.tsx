@@ -1,20 +1,33 @@
-import {Segment, Item} from 'semantic-ui-react';
+import { Segment, Item, Header } from 'semantic-ui-react';
 import { useStore } from "../../../app/stores/store";
-import {observer} from 'mobx-react-lite';
+import { observer } from 'mobx-react-lite';
 import ActivityListItem from './ActivityListItem';
+import { Fragment } from 'react';
 
 
-function ActivityList(){
-    const {activityStore} = useStore();
-    
-    return(
-        <Segment>
-            <Item.Group divided>
-                {activityStore.activitiesByDate?.map(activity=>(
-                    <ActivityListItem key={activity.id} activitiy={activity}/>
-                ))}
-            </Item.Group>
-        </Segment>
+function ActivityList() {
+    const { activityStore } = useStore();
+
+    const renderedGroupedActivities = activityStore.groupedActivities.map(([group, activities]) => {
+        return <Fragment key={group}>
+            <Header sub color='teal'>
+                {group}
+            </Header>
+            <Segment>
+                <Item.Group divided>
+                    {activities?.map(activity => (
+                        <ActivityListItem key={activity.id} activitiy={activity} />
+                    ))}
+                </Item.Group>
+            </Segment>
+        </Fragment>
+    })
+
+    return (
+        <>
+            {renderedGroupedActivities}
+        </>
+
     )
 }
 
